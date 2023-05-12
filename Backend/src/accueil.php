@@ -22,7 +22,7 @@
     <main>
         <p>
             Projet d'un site intranet d'une entreprise pour la gestion
-            du parc auto et des clients.
+            du parc auto et des clients. A rendre pour Juin.
         </p>
     </main>
     <footer>
