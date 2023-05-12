@@ -18,6 +18,7 @@
 <body>
     <header>
         <h1>LocAuto</h1>
+        <h2>Sommaire</h2>
     </header>
     <main>
         <p>
