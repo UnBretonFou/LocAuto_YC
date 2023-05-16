@@ -1,8 +1,12 @@
+<!-- Mettre le "session_start" dessous --> 
+<?php
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Informations Client</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Clients</title>
+    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/styles.css">
 </head>
 <body>
     <header>
@@ -10,14 +14,41 @@
     </header>
 
     <main>
-        <div class="client-details">
-            <h2>Informations Client</h2>
-            <p>Nom : <span>Nom Client</span></p>
-            <p>Prénom : <span>Prénom Client</span></p>
-            <p>Numéro de contrat de location : <span>Numéro de contrat</span></p>
-            <!-- Ajoutez les autres informations du client ici -->
-            <button class="delete-button">Supprimer</button>
-        </div>
+    <h1>Guest History</h1>
+    <?php
+        include "../outils/biblio.php";
+
+        $con = connexion();
+        //requête sql ci-dessous
+        $sql = "SELECT * FROM client";
+        $requete = mysqli_query($con, $sql);
+
+        echo "<table style='border-collapse: collapse;'>";
+        echo "<tr><th style='border: 1px solid black;'>Nom</th>
+            <th style='border: 1px solid black;'>Prénom</th>
+            <th style='border: 1px solid black;'>Adresse</th></tr>";
+
+        $compteur = 0;
+
+        while ($resultat =mysqli_fetch_array($requete)) {
+            $compteur++;
+
+            $classe = ($compteur % 2 == 0) ? "even" : "odd";
+
+            echo "<tr class='" . $classe . "'>
+                <td style='border: 1px solid black;'>" . $resultat["nom"] . "</td>
+                <td style='border: 1px solid black;'>" . $resultat["prenom"] . "</td>
+                <td style='border: 1px solid black;'>" . $resultat["adresse"] . "</td></tr>";
+        }
+
+        echo "</table>";
+
+        //!! SUPPRIMER PLUS TARD !!\\
+        // $test_2 = mysqli_fetch_array($requete);
+        // echo $test_2["nom"];
+        // header('Location: http://www.google.com/');
+    ?>
+
     </main>
 
     <footer>
@@ -25,3 +56,12 @@
     </footer>
 </body>
 </html>
+
+
+<!-- TIPS - PHP  -->
+<!-- 
+    header('Location: http://www.google.com/'); => redirige vers une page, comme le target="_blank".
+
+
+
+ -->
