@@ -1,0 +1,113 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+}
+
+header {
+    background-color: #222;
+    padding: 10px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Styles spécifiques à la page d'accueil */
+.LogoLocAuto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Styles spécifiques à la page Rechercher */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Styles spécifiques à la page Client */
+.client-list li {
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #222;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+}
+
+.client-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styles spécifiques à la page Informations Client */
+.client-details {
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+}
+
+.client-details h2 {
+    margin-bottom: 10px;
+}
+
+.client-details p {
+    margin-bottom: 5px;
+}
+
+.client-details .delete-button {
+    background-color: #ff0000;
+    color: #222;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Styles spécifiques à la page Facturation */
+.invoice-history {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.invoice-history li {
+    margin-bottom: 10px;
+}
+
+.invoice-history .delete-button {
+    background-color: #ff0000;
+    color: #222;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
