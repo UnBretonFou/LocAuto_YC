@@ -15,6 +15,7 @@
 
     <main>
         <h1>Guest History</h1>
+
         <?php
             include "../outils/biblio.php";
 
