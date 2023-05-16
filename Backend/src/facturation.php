@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Facturation</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/styles.css">
 </head>
 <body>
     <header>

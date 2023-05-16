@@ -14,40 +14,35 @@
     </header>
 
     <main>
-    <h1>Guest History</h1>
-    <?php
-        include "../outils/biblio.php";
+        <h1>Guest History</h1>
+        <?php
+            include "../outils/biblio.php";
 
-        $con = connexion();
-        //requête sql ci-dessous
-        $sql = "SELECT * FROM client";
-        $requete = mysqli_query($con, $sql);
+            $con = connexion();
+            //requête sql ci-dessous
+            $sql = "SELECT * FROM client";
+            $requete = mysqli_query($con, $sql);
 
-        echo "<table style='border-collapse: collapse;'>";
-        echo "<tr><th style='border: 1px solid black;'>Nom</th>
-            <th style='border: 1px solid black;'>Prénom</th>
-            <th style='border: 1px solid black;'>Adresse</th></tr>";
+            echo "<div class='table-container'><table style='border-collapse: collapse;'>";
+            echo "<tr><th style='border: 1px solid black;'>Nom</th>
+                <th style='border: 1px solid black;'>Prénom</th>
+                <th style='border: 1px solid black;'>Adresse</th></tr>";
 
-        $compteur = 0;
+            $compteur = 0;
 
-        while ($resultat =mysqli_fetch_array($requete)) {
-            $compteur++;
+            while ($resultat =mysqli_fetch_array($requete)) {
+                $compteur++;
 
-            $classe = ($compteur % 2 == 0) ? "even" : "odd";
+                $classe = ($compteur % 2 == 0) ? "even" : "odd";
 
-            echo "<tr class='" . $classe . "'>
-                <td style='border: 1px solid black;'>" . $resultat["nom"] . "</td>
-                <td style='border: 1px solid black;'>" . $resultat["prenom"] . "</td>
-                <td style='border: 1px solid black;'>" . $resultat["adresse"] . "</td></tr>";
-        }
+                echo "<tr class='" . $classe . "'>
+                    <td style='border: 1px solid black;'>" . $resultat["nom"] . "</td>
+                    <td style='border: 1px solid black;'>" . $resultat["prenom"] . "</td>
+                    <td style='border: 1px solid black;'>" . $resultat["adresse"] . "</td></tr>";
+            }
 
-        echo "</table>";
-
-        //!! SUPPRIMER PLUS TARD !!\\
-        // $test_2 = mysqli_fetch_array($requete);
-        // echo $test_2["nom"];
-        // header('Location: http://www.google.com/');
-    ?>
+            echo "</table></div>";
+        ?>
 
     </main>
 

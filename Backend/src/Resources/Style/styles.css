@@ -39,6 +39,9 @@ footer {
 
 h1 {
     color: #ff0000;
+    display: flex;
+    justify-content: center;
+
 }
 
 /* Styles spécifiques à la page d'accueil */
@@ -48,75 +51,25 @@ h1 {
     align-items: center;
 }
 /* Styles spécifiques à la page Rechercher */
-.search-bar {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
-.result-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
 
 /* Styles spécifiques à la page Client */
-.client-list li {
-    list-style-type: none;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #222;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
-}
 
-.client-list a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 /* Styles spécifiques à la page Informations Client */
-.client-details {
-    padding: 20px;
-    background-color: #222;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+.table-container {
+    margin-top: 20px;
 }
 
-.client-details h2 {
-    margin-bottom: 10px;
+table {
+    border-collapse: collapse;
+    margin: auto;
 }
 
-.client-details p {
-    margin-bottom: 5px;
-}
-
-.client-details .delete-button {
-    background-color: #ff0000;
-    color: #222;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-th,  td {
-    padding : 8px;
+th, td {
+    padding: 8px;
+    border: 1px solid;
     color: #fff;
 }
 
 /* Styles spécifiques à la page Facturation */
-.invoice-history {
-    list-style-type: none;
-    margin-bottom: 20px;
-}
-
-.invoice-history li {
-    margin-bottom: 10px;
-}
-
-.invoice-history .delete-button {
-    background-color: #ff0000;
-    color: #222;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
