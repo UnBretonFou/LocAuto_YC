@@ -37,6 +37,10 @@ footer {
     text-align: center;
 }
 
+h1 {
+    color: #ff0000;
+}
+
 /* Styles spécifiques à la page d'accueil */
 .LogoLocAuto {
     display: flex;
@@ -92,6 +96,11 @@ footer {
     padding: 5px 10px;
     margin-top: 10px;
     cursor: pointer;
+}
+
+th,  td {
+    padding : 8px;
+    color: #fff;
 }
 
 /* Styles spécifiques à la page Facturation */
