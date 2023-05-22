@@ -66,28 +66,32 @@
 
         <?php
             //requête sql ci-dessous
-            $sql = "SELECT * FROM client";
+            $sql = "SELECT c.id_client, c.nom, c.prenom, c.adresse, t.libelle 
+                    FROM client c
+                    INNER JOIN type_de_client t ON c.id_type_de_client = t.id_type_de_client";
             $requete = mysqli_query($con, $sql);
 
             echo "<div class='table-container'><table style='border-collapse: collapse;'>";
             echo "<tr><th style='border: 1px solid black;'>Numéro Client</th>
-                <th style='border: 1px solid black;'>Nom</th>
-                <th style='border: 1px solid black;'>Prénom</th>
-                <th style='border: 1px solid black;'>Adresse</th></tr>";
+                    <th style='border: 1px solid black;'>Nom</th>
+                    <th style='border: 1px solid black;'>Prénom</th>
+                    <th style='border: 1px solid black;'>Adresse</th>
+                    <th style='border: 1px solid black;'>Type de client</th></tr>";
 
             $compteur = 0;
 
-            while ($resultat =mysqli_fetch_array($requete)) {
+            while ($resultat = mysqli_fetch_array($requete)) {
                 $compteur++;
-
+            
                 $classe = ($compteur % 2 == 0) ? "even" : "odd";
-
+            
                 echo "<tr class='" . $classe . "'>
-                    <td style='border: 1px solid black;'>" . $resultat["id_client"] . "</td>
-                    <td style='border: 1px solid black;'>" . $resultat["nom"] . "</td>
-                    <td style='border: 1px solid black;'>" . $resultat["prenom"] . "</td>
-                    <td style='border: 1px solid black;'>" . $resultat["adresse"] . "</td></tr>";
-                    
+                        <td style='border: 1px solid black;'>" . $resultat["id_client"] . "</td>
+                        <td style='border: 1px solid black;'>" . $resultat["nom"] . "</td>
+                        <td style='border: 1px solid black;'>" . $resultat["prenom"] . "</td>
+                        <td style='border: 1px solid black;'>" . $resultat["adresse"] . "</td>
+                        <td style='border: 1px solid black;'>" . $resultat["libelle"] . "</td>
+                      </tr>";
             }
 
             echo "</table></div>";
