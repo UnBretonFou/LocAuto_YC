@@ -1,8 +1,4 @@
 /* Styles généraux */
-* {
-    color: #fff;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #222;
@@ -11,7 +7,7 @@ body {
 header {
     background-color: #222;
     padding: 10px;
-    color: #fff;
+    color: #222;
 }
 
 nav ul {
