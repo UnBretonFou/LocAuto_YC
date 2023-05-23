@@ -4,7 +4,7 @@
     $con = connexion();
 
     // Récupérer les données du formulaire
-    $voiture_modele = $_POST["voiture_modele"];
+    $voiture_modele = $_POST["id_modele"];
     $client = $_POST["client"];
     $compteur_debut = $_POST["compteur_debut"];
     $compteur_fin = $_POST["compteur_fin"];
