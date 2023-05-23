@@ -18,14 +18,12 @@
 
         if ($result) {
             //Succès de la requête
-            $_SESSION["message"] = "Le client a été ajouté avec succès.";
+            echo "<script>alert('Le client a été ajouté avec succès.'); window.location.href = '../client.php';</script>";
         } else {
             //Si échec de la requête
-            $_SESSION["error"] = "Une erreur s'est produite lors de l'ajout du client.";
+            echo "<script>alert('Une erreur s'est produite lors de l'ajout du client.'); window.location.href = '../client.php';</script>";
+            // $_SESSION["error"] = "Une erreur s'est produite lors de l'ajout du client.";  -- Code précédent
         }
     }
-
-    //Redirection vers client.php après l'ajout'
-    echo "<script>alert('Le client a été ajouté avec succès.'); window.location.href = '../client.php';</script>";
 
 ?>
