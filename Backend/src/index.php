@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mon Site Intranet</title>
-    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/styles.css">
+    <title>Site Intranet</title>
+    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/style_index.css">
 </head>
 <body>
     <header>

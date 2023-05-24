@@ -13,7 +13,7 @@
     $choix_option = $_POST["choix_option"];
 
     //Récupérer l'id_modele de voiture en fonction du libellé
-    $sql_voiture_modele = "SELECT id_modele FROM modele";
+    $sql_voiture_modele = "SELECT id_modele FROM modele WHERE libelle = '$voiture_modele'";
     $result_voiture_modele = mysqli_query($con, $sql_voiture_modele);
     $row_voiture_modele = mysqli_fetch_array($result_voiture_modele);
     $id_voiture = $row_voiture_modele["id_modele"];

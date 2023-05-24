@@ -8,12 +8,13 @@
 <html>
 <head>
     <title>Clients</title>
-    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/styles.css">
+    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/style_location.css">
 </head>
 <body>
     <header>
+        <!-- Bouton accueil -->
+        <a href="index.php">Accueil</a>
         <!-- En-tête de la page -->
-        
         <form method="POST" action="../src/controlers/ajouter_client.php">
             <h2>Ajouter un client</h2>
             <label for="nom">Nom : </label>
@@ -72,11 +73,13 @@
             $requete = mysqli_query($con, $sql);
 
             echo "<div class='table-container'><table style='border-collapse: collapse;'>";
-            echo "<tr><th style='border: 1px solid black;'>Numéro Client</th>
-                    <th style='border: 1px solid black;'>Nom</th>
-                    <th style='border: 1px solid black;'>Prénom</th>
-                    <th style='border: 1px solid black;'>Adresse</th>
-                    <th style='border: 1px solid black;'>Type de client</th></tr>";
+            echo "<tr>
+                    <th>Numéro Client</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Adresse</th>
+                    <th>Type de client</th>
+                  </tr>";
 
             $compteur = 0;
 
@@ -86,11 +89,11 @@
                 $classe = ($compteur % 2 == 0) ? "even" : "odd";
             
                 echo "<tr class='" . $classe . "'>
-                        <td style='border: 1px solid black;'>" . $resultat["id_client"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["nom"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["prenom"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["adresse"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["libelle"] . "</td>
+                        <td>" . $resultat["id_client"] . "</td>
+                        <td>" . $resultat["nom"] . "</td>
+                        <td>" . $resultat["prenom"] . "</td>
+                        <td>" . $resultat["adresse"] . "</td>
+                        <td>" . $resultat["libelle"] . "</td>
                       </tr>";
             }
 

@@ -7,10 +7,12 @@
 <html>
 <head>
     <title>Facturation</title>
-    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/styles.css">
+    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/style_location.css">
 </head>
 <body>
     <header>
+        <!-- Bouton accueil -->
+        <a href="index.php">Accueil</a>
         <!-- En-tête de la page -->
         <form method="POST" action="../src/controlers/ajouter_location.php">
             <h2>Ajouter une location</h2>
@@ -25,7 +27,7 @@
                     }
                 ?>
             </select><br>
-            <label for="client">Nom du client : 
+            <label for="client">Nom du client : </label> 
                 <select name="client" requiered>
                 <?php
                     //On récupère tous les noms des clients de la base de données
@@ -73,15 +75,15 @@
 
                 echo "<div class='table-container'><table style='border-collapse: collapse;'>";
                 echo "<tr>
-                        <th style='border: 1px solid black;'>Numéro location</th>
-                        <th style='border: 1px solid black;'>Nom locataire</th>
-                        <th style='border: 1px solid black;'>Modèle voiture</th>
-                        <th style='border: 1px solid black;'>Date de début</th>
-                        <th style='border: 1px solid black;'>Date de fin</th>
-                        <th style='border: 1px solid black;'>Compteur début</th>
-                        <th style='border: 1px solid black;'>Compteur fin</th>
-                        <th style='border: 1px solid black;'>Options</th>
-                        <th style='border: 1px solid black;'>Actions</th>
+                        <th>Numéro location</th>
+                        <th>Nom locataire</th>
+                        <th>Modèle voiture</th>
+                        <th>Date de début</th>
+                        <th>Date de fin</th>
+                        <th>Compteur début</th>
+                        <th>Compteur fin</th>
+                        <th>Options</th>
+                        <th>Actions</th>
                       </tr>";
 
                 $compteur = 0;
@@ -91,15 +93,15 @@
                     $classe = ($compteur % 2 == 0) ? "even" : "odd";
                     
                     echo "<tr class='" . $classe . "'>
-                        <td style='border: 1px solid black;'>" . $resultat["id_location"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["nom_locataire"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["modele_voiture"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["date_debut"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["date_fin"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["compteur_debut"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["compteur_fin"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["options"] . "</td>
-                        <td style='border: 1px solid black;'><a href=../src/controlers/supprimer_location.php?supprimer_location=" . $resultat["id_location"] . "'>Supprimer</a></td>
+                        <td>" . $resultat["id_location"] . "</td>
+                        <td>" . $resultat["nom_locataire"] . "</td>
+                        <td>" . $resultat["modele_voiture"] . "</td>
+                        <td>" . $resultat["date_debut"] . "</td>
+                        <td>" . $resultat["date_fin"] . "</td>
+                        <td>" . $resultat["compteur_debut"] . "</td>
+                        <td>" . $resultat["compteur_fin"] . "</td>
+                        <td>" . $resultat["options"] . "</td>
+                        <td><a href=../src/controlers/supprimer_location.php?supprimer_location=" . $resultat["id_location"] . "'>Supprimer</a></td>
                     </tr>";
                 }
 
