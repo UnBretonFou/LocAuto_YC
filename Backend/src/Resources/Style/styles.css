@@ -71,5 +71,17 @@ th, td {
     border: 1px solid;
     color: #fff;
 }
+/* Style pour voitures.php */
+test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.center-table {
+    text-align: center;
+}
 
 /* Styles spécifiques à la page Facturation */
