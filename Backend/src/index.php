@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="recherche.php">Rechercher</a></li>
                 <li><a href="client.php">Client</a></li>
-                <li><a href="facturation.php">Facturation</a></li>
+                <li><a href="location.php">Location</a></li>
             </ul>
         </nav>
     </header>

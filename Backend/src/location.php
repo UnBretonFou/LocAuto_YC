@@ -16,14 +16,16 @@
         <!-- En-tête de la page -->
         <form method="POST" action="../src/controlers/ajouter_location.php">
             <h2>Ajouter une location</h2>
-            <label for="voiture_modele">Modèle: </label>
-            <select name="voiture_modele" required>
+            <label for="voiture">Modèle: </label>
+            <select name="voiture" required>
                 <?php
                     // Récupère tous les modèles de voiture de la base de données.
-                    $sql = "SELECT id_modele, libelle FROM modele";
+                    $sql = "SELECT v.id_voiture, v.immatriculation, m.id_modele, m.libelle
+                            FROM voiture v
+                            INNER JOIN modele m ON v.id_modele = m.id_modele";
                     $result = mysqli_query($con, $sql);
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<option value='" . $row["id_modele"] . "'>" . $row["libelle"] . "</option>";
+                        echo "<option value='" . $row["id_voiture"] . "'>" . $row["immatriculation"] . " // " . $row["libelle"] . "</option>";
                     }
                 ?>
             </select><br>
@@ -31,10 +33,11 @@
                 <select name="client" requiered>
                 <?php
                     //On récupère tous les noms des clients de la base de données
-                    $sql = "SELECT nom FROM client";
+                    $sql = "SELECT id_client, nom 
+                            FROM client";
                     $result = mysqli_query($con, $sql);
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<option value='" . $row["nom"] . "'>" . $row["nom"] . "</option>";
+                        echo "<option value='" . $row["id_client"] . "'>" . $row["nom"] . "</option>";
                     }
                 ?>
             </select>
