@@ -1,0 +1,162 @@
+html, body, .wrapper, .item {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: url(../src/Resources/Images/1109487.jpg) 0 50% no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.item:hover,
+.item:hover ~ .item {
+  transition: ease-out .1s;
+}
+
+.item.item_fake {
+  background: none;
+  z-index: 200;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item_fake:hover {
+  z-index: 210;
+  color: #fff;
+}
+
+.item_title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  bottom: 20px;
+}
+
+/* --- Item 1 --- */
+.item_1 {
+  background: rgba(255, 72, 82, 0.5);
+  left: 0;  
+  right: 75%;
+}
+
+.item_fake.item_1:hover,
+.item_fake.item_1:hover ~ .item_1 {
+  margin-left: 0; 
+  margin-right: -10%;
+}
+
+.item_fake.item_1:hover ~ .item_1 {
+  z-index: 20; 
+}
+
+.item_fake.item_1:hover ~ .item_2 {
+  left: 35%;
+}
+
+/* --- Item 2 --- */
+.item_2 {
+  background: rgba(68, 127, 157, 0.5);
+  left: 25%;
+  right: 50%;
+}
+
+.item_fake.item_2:hover,
+.item_fake.item_2:hover ~ .item_2 {
+  margin-left: -10%; 
+  margin-right: -10%;
+}
+
+.item_fake.item_2:hover ~ .item_2 {
+  z-index: 20; 
+}
+
+
+.item_fake.item_2:hover ~ .item_1 {
+  right: 85%; 
+}
+
+.item_fake.item_2:hover ~ .item_3 {
+  left: 60%;
+  right: 25%; 
+}
+
+/* --- Item 3 --- */
+.item_3 {
+  background: rgba(253, 235, 113, 0.5);
+  left: 50%;
+  right: 25%;
+}
+
+.item_fake.item_3:hover,
+.item_fake.item_3:hover ~ .item_3 {
+  margin-left: -10%; 
+  margin-right: -10%;
+}
+
+.item_fake.item_3:hover ~ .item_3 {
+  z-index: 20; 
+}
+
+.item_fake.item_3:hover ~ .item_2 {
+  right: 60%; 
+}
+
+.item_fake.item_3:hover ~ .item_4 {
+  left: 85%;
+}
+
+/* --- Item 3 --- */
+.item_4 {
+  background: rgba(91, 194, 95, 0.5);
+  left: 75%;
+  right: 0;
+}
+
+.item_fake.item_4:hover,
+.item_fake.item_4:hover ~ .item_4 {
+  margin-left: -10%; 
+  margin-right: 0%;
+}
+
+.item_fake.item_1:hover ~ .item_4 {
+  z-index: 20; 
+}
+
+.item_fake.item_4:hover ~ .item_3 {
+  right: 35%;
+}
+
+
+/* ----- */
+.header {
+  position: absolute;
+  z-index: 100;
+  font-size: 100px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
+  width: 60%;
+  text-align: center;
+  padding: 25px 0 30px;
+  left: 50%;
+  margin-left: -30%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.6)
+}
