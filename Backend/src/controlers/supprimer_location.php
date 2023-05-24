@@ -26,15 +26,15 @@ if (isset($_GET['supprimer_location'])) {
             mysqli_stmt_close($stmt_supprimer_location);
             
             // Afficher un message de succès
-            echo "<script>alert('La location a été supprimée avec succès.'); window.location.href = '../facturation.php';</script>";
+            echo "<script>alert('La location a été supprimée avec succès.'); window.location.href = '../location.php';</script>";
             exit();
         } else {
             // Afficher un message d'erreur
-            echo "<script>alert('Une erreur s'est produite lors de la suppression de la location.'); window.location.href = '../facturation.php';</script>";
+            echo "<script>alert('Une erreur s'est produite lors de la suppression de la location.'); window.location.href = '../location.php';</script>";
         }
     } else {
         // Afficher un message d'erreur
-        echo "<script>alert('Une erreur s'est produite lors de la suppression des choix d'options.'); window.location.href = '../facturation.php';</script>";
+        echo "<script>alert('Une erreur s'est produite lors de la suppression des choix d'options.'); window.location.href = '../location.php';</script>";
     }
 }
 ?>
