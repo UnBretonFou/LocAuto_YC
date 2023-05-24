@@ -7,12 +7,15 @@
 <html>
 <head>
     <title>Facturation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../src/Resources/Style/style_location.css">
+    
 </head>
 <body>
     <header>
         <!-- Bouton accueil -->
-        <a href="index.php">Accueil</a>
+        <a href="index.php" class="btn-accueil">Accueil</a>
         <!-- En-tête de la page -->
         <form method="POST" action="../src/controlers/ajouter_location.php">
             <h2>Ajouter une location</h2>
@@ -61,60 +64,65 @@
                     <option value="6">Tout propre</option>
                 </select><br><br>
             <!-- Bouton Ajouter -->
-            <input type="submit" value="Ajouter">
+            <button type="submit" class="btn-ajouter">Ajouter</button>
+
         </form>
     </header>
 
     <main>
     <h1>Location</h1>
         <?php
-                //requête sql ci-dessous
-                $sql = "SELECT location.id_location, client.nom AS nom_locataire, modele.libelle AS modele_voiture, location.date_debut, location.date_fin, location.compteur_debut, location.compteur_fin,
-                (SELECT GROUP_CONCAT(option.libelle SEPARATOR ', ') FROM choix_option INNER JOIN option ON choix_option.id_option = option.id_option WHERE choix_option.id_location = location.id_location) AS options
-                FROM location
-                INNER JOIN client ON location.id_client = client.id_client
-                INNER JOIN modele ON location.id_voiture = modele.id_modele";
-                $requete = mysqli_query($con, $sql);
-
-                echo "<div class='table-container'><table style='border-collapse: collapse;'>";
-                echo "<tr>
-                        <th>Numéro location</th>
-                        <th>Nom locataire</th>
-                        <th>Modèle voiture</th>
-                        <th>Date de début</th>
-                        <th>Date de fin</th>
-                        <th>Compteur début</th>
-                        <th>Compteur fin</th>
-                        <th>Options</th>
-                        <th>Actions</th>
-                      </tr>";
-
-                $compteur = 0;
-
-                while ($resultat = mysqli_fetch_array($requete)) {
-                    $compteur++;
-                    $classe = ($compteur % 2 == 0) ? "even" : "odd";
-                    
-                    echo "<tr class='" . $classe . "'>
-                        <td>" . $resultat["id_location"] . "</td>
-                        <td>" . $resultat["nom_locataire"] . "</td>
-                        <td>" . $resultat["modele_voiture"] . "</td>
-                        <td>" . $resultat["date_debut"] . "</td>
-                        <td>" . $resultat["date_fin"] . "</td>
-                        <td>" . $resultat["compteur_debut"] . "</td>
-                        <td>" . $resultat["compteur_fin"] . "</td>
-                        <td>" . $resultat["options"] . "</td>
-                        <td><a href=../src/controlers/supprimer_location.php?supprimer_location=" . $resultat["id_location"] . "'>Supprimer</a></td>
-                    </tr>";
-                }
-
-                echo "</table></div>";
-            ?>
+            //requête sql ci-dessous
+            $sql = "SELECT location.id_location, client.nom AS nom_locataire, modele.libelle AS modele_voiture, location.date_debut, location.date_fin, location.compteur_debut, location.compteur_fin,
+            (SELECT GROUP_CONCAT(option.libelle SEPARATOR ', ') FROM choix_option INNER JOIN option ON choix_option.id_option = option.id_option WHERE choix_option.id_location = location.id_location) AS options
+            FROM location
+            INNER JOIN client ON location.id_client = client.id_client
+            INNER JOIN modele ON location.id_voiture = modele.id_modele";
+            $requete = mysqli_query($con, $sql);
+            echo "<div class='table-container'><table style='border-collapse: collapse;'>";
+            echo "<tr>
+                    <th>Numéro location</th>
+                    <th>Nom locataire</th>
+                    <th>Modèle voiture</th>
+                    <th>Date de début</th>
+                    <th>Date de fin</th>
+                    <th>Compteur début</th>
+                    <th>Compteur fin</th>
+                    <th>Options</th>
+                    <th>Actions</th>
+                  </tr>";
+            $compteur = 0;
+            while ($resultat = mysqli_fetch_array($requete)) {
+                $compteur++;
+                $classe = ($compteur % 2 == 0) ? "even" : "odd";
+                
+                echo "<tr class='" . $classe . "'>
+                    <td>" . $resultat["id_location"] . "</td>
+                    <td>" . $resultat["nom_locataire"] . "</td>
+                    <td>" . $resultat["modele_voiture"] . "</td>
+                    <td>" . $resultat["date_debut"] . "</td>
+                    <td>" . $resultat["date_fin"] . "</td>
+                    <td>" . $resultat["compteur_debut"] . "</td>
+                    <td>" . $resultat["compteur_fin"] . "</td>
+                    <td>" . $resultat["options"] . "</td>
+                    <td><a class='delete-button' href=../src/controlers/supprimer_location.php?supprimer_location=" . $resultat["id_location"] . "class='delete-button'>Supprimer</a></td>
+                </tr>";
+            }
+            
+            echo "</table></div>";
+            // Vérifier si un message de suppression a été défini
+            if (isset($_SESSION['location_supprimee'])) {
+               echo "<script>alert('La location a été supprimée avec succès.');</script>";
+               unset($_SESSION['location_supprimee']);
+            }
+        ?>
 
     </main>
 
     <footer>
         <!-- Pied de page -->
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

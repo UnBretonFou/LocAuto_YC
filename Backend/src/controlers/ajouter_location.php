@@ -24,12 +24,9 @@
     $count_disponibilite = $row_disponibilite["count"];
 
     if ($count_disponibilite > 0) {
-        // La voiture n'est pas disponible pendant la période spécifiée
-        // Afficher un message d'erreur ou prendre une action appropriée
-        // Par exemple :
-        echo "La voiture n'est pas disponible pendant la période spécifiée.";
-        // Vous pouvez rediriger vers une autre page ou afficher un message d'erreur dans le formulaire
-        // Assurez-vous d'adapter cette action en fonction de vos besoins.
+        // Afficher un message d'erreur quand la voiture n'est pas disponible.
+        echo "<script>alert('La voiture n\'est pas disponible pendant la période spécifiée.');</script>";
+        echo "<script>window.location.href = '../location.php';</script>"; 
         exit();
     }
 

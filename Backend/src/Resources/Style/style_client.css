@@ -18,14 +18,16 @@ header a {
 
 /* Animation pour les boutons "Accueil" et "Ajouter" */
 .btn-accueil,
-.btn-ajouter {
+.btn-ajouter,
+.btn-supprimer {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .btn-accueil::before,
-.btn-ajouter::before {
+.btn-ajouter::before,
+.btn-supprimer::before {
     content: "";
     position: absolute;
     top: 0;
@@ -38,7 +40,8 @@ header a {
 }
 
 .btn-accueil:hover::before,
-.btn-ajouter:hover::before {
+.btn-ajouter:hover::before,
+.btn-supprimer:hover::before {
     left: 100%;
 }
 
@@ -79,9 +82,10 @@ input[type="submit"] {
     transition: all 0.3s ease;
 }
 
-/* Encadrement du bouton "Accueil" et "Ajouter" */
+/* Encadrement des boutons "Accueil", "Ajouter" et "Supprimer" */
 header .btn-accueil,
-header .btn-ajouter {
+header .btn-ajouter,
+header .btn-supprimer {
     position: relative;
     overflow: hidden;
     display: inline-block;
@@ -96,7 +100,8 @@ header .btn-ajouter {
 }
 
 header .btn-accueil::before,
-header .btn-ajouter::before {
+header .btn-ajouter::before,
+header .btn-supprimer::before {
     content: "";
     position: absolute;
     top: 0;
@@ -109,7 +114,8 @@ header .btn-ajouter::before {
 }
 
 header .btn-accueil:hover::before,
-header .btn-ajouter:hover::before {
+header .btn-ajouter:hover::before,
+header .btn-supprimer:hover::before {
     left: 100%;
 }
 
@@ -160,23 +166,4 @@ footer {
     100% {
         opacity: 1;
     }
-}
-
-/* Style du bouton supprimer */
-.delete-button {
-    background-color: #f2f2f2;
-    color: #000;
-    border: none;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.delete-button:hover {
-    background-color: rgb(117, 117, 117);
 }
