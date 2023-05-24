@@ -27,10 +27,10 @@
 
             echo "<div class='table-container'><table style='border-collapse: collapse;'>";
             echo "<tr>
-                    <th style='border: 1px solid black;'>Marque</th>
-                    <th style='border: 1px solid black;'>Modèle</th>
-                    <th style='border: 1px solid black;'>Plaque d'immatriculation</th>
-                    <th style='border: 1px solid black;'>Compteur</th>
+                    <th>Marque</th>
+                    <th>Modèle</th>
+                    <th>Plaque d'immatriculation</th>
+                    <th>Compteur</th>
                   </tr>";
 
             $compteur = 0;
@@ -40,15 +40,15 @@
                 $classe = ($compteur % 2 == 0) ? "even" : "odd";
             
                 echo "<tr class='" . $classe . "'>
-                        <td style='border: 1px solid black;'>" . $resultat["marque"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["modele"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["immatriculation"] . "</td>
-                        <td style='border: 1px solid black;'>" . $resultat["compteur"] . " Km</td>
+                        <td>" . $resultat["marque"] . "</td>
+                        <td>" . $resultat["modele"] . "</td>
+                        <td>" . $resultat["immatriculation"] . "</td>
+                        <td>" . $resultat["compteur"] . " Km</td>
                       </tr>";
 
                 $cheminImage = "../../Resources/Images_voitures/" . $resultat["image"];
                 echo "<tr>
-                        <td colspan='4' style='border: 1px solid black;' class='center-table'>
+                        <td>
                             <img src='" . $cheminImage . "' alt='Image du modèle'>
                         </td>
                       </tr>"; 

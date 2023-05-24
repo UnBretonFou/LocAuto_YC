@@ -1,3 +1,27 @@
+<!------------ AJOUTER VEHICULE ------------>
+<?php
+    session_start();
+    include "../outils/biblio.php";
+    $con = connexion(); 
+
+
+
+    if...
+?>
+
+<!------------ SUPPRIMER VEHICULE ------------>
+<?php
+    session_start();
+    include "../outils/biblio.php";
+    $con = connexion(); 
+
+
+
+    if...
+?>
+
+
+
 <?php
     session_start();
     include "../outils/biblio.php";
