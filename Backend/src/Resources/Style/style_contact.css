@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
-    font-family: papyrus;
+  font-family: 'Bebas Neue', sans-serif;
 }
 /* Style pour l'arrière-plan avec les gifs */
 body {
@@ -37,7 +39,7 @@ body {
   color: #fff;
   width: 450px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1;
