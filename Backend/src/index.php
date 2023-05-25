@@ -11,7 +11,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="recherche.php">Rechercher</a></li>
+                <li><a href="recherche_voiture.php">Recherche voiture</a></li>
                 <li><a href="client.php">Client</a></li>
                 <li><a href="facturation.php">Facturation</a></li>
             </ul>

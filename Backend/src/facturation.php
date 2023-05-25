@@ -18,14 +18,6 @@
             <h2>Ajouter une location</h2>
             <label for="voiture_modele">Modèle: </label>
             <select name="voiture_modele" required>
-                <?php
-                    // Récupère tous les modèles de voiture de la base de données.
-                    $sql = "SELECT id_modele, libelle FROM modele";
-                    $result = mysqli_query($con, $sql);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<option value='" . $row["id_modele"] . "'>" . $row["libelle"] . "</option>";
-                    }
-                ?>
             </select><br>
             <label for="client">Nom du client : </label> 
                 <select name="client" requiered>
