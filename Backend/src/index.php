@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SIMPLE HOME PAGE</title>
+        <title>Page d'accueil</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../src/Resources/Style/style_index.css">
@@ -10,7 +10,7 @@
     <body>
       
       <div class="wrapper">
-        <a href="#" class="item item_fake item_1">
+        <a href="contact.php" class="item item_fake item_1">
           <span class="item_title">Contact</span>
         </a>
         <a href="recherche.php" class="item item_fake item_2">
