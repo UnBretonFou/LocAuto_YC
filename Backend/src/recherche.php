@@ -9,10 +9,11 @@
     <title>Voitures</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/styles.css">
+    <link rel="stylesheet" type="text/css" href="../src/Resources/Style/style_location.css">
 </head>
 <body>
 <header>
+    <a href="index.php" class="btn-accueil">Accueil</a>
     <form method="POST" action="../src/controlers/ajouter_vehicule.php">
         <h2>Ajouter un véhicule</h2>
         <label for="id_marque">Marque : </label>
@@ -69,6 +70,7 @@
                     <th>Modèle</th>
                     <th>Plaque Immatriculation</th>
                     <th>Compteur</th>
+                    <th>Suprimer</th>
                   </tr>";
 
             $compteur = 0;
