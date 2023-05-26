@@ -46,7 +46,6 @@
         mysqli_query($con, $sql_insert_option);
     }
 
-    // Rediriger vers la page principale
-    header("Location: ../location.php");
-    exit();
+    //Redirection vers client.php après la suppression
+    echo "<script>alert('Le client a été ajouté avec succès.'); window.location.href = '../location.php';</script>";
 ?>

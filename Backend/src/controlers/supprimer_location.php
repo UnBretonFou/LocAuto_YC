@@ -21,16 +21,16 @@ if (isset($_GET['supprimer_location'])) {
         $stmt_supprimer_location = mysqli_prepare($con, $sql_supprimer_location);
         
         if ($stmt_supprimer_location) {
-            mysqli_stmt_bind_param($stmt_supprimer_vehicule, "i", $id_voiture);
-            mysqli_stmt_execute($stmt_supprimer_vehicule);
-            mysqli_stmt_close($stmt_supprimer_vehicule);
+            mysqli_stmt_bind_param($stmt_supprimer_location, "i", $id_location);
+            mysqli_stmt_execute($stmt_supprimer_location);
+            mysqli_stmt_close($stmt_supprimer_location);
             
             // Afficher un message de succès
-            echo "<script>alert('Le vehicule a été supprimée avec succès.'); window.location.href = '../recherche.php';</script>";
+            echo "<script>alert('La location a été supprimée avec succès.'); window.location.href = '../location.php';</script>";
             exit();
         } else {
             // Afficher un message d'erreur
-            echo "<script>alert('Une erreur s'est produite lors de la suppression du véhicule.'); window.location.href = '../recherche.php';</script>";
+            echo "<script>alert('Une erreur s'est produite lors de la suppression de la location.'); window.location.href = '../location.php';</script>";
         }
     }
 }
