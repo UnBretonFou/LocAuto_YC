@@ -57,7 +57,7 @@
             <label for="date_fin">Date fin : </label>
             <input type="date" name="date_fin" pattern="\d{4}/\d{2}/\d{2}" required><br>
 
-            <label for="choix_option">Choix option :</label><br>
+            <label for="choix_option">Choix option :</label>
                 <select name="choix_option[]" multiple required>
                     <option value="1">Assurance complémentaire</option>
                     <option value="2">Nettoyage</option>

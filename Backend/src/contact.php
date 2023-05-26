@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page de contact</title>
+    <title>Support</title>
     <link rel="stylesheet" type="text/css" href="../src/Resources/Style/style_contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="email-box">
-        <h2>Nous contacter ! </h2>
+        <h2>Nous contacter pour l'ouverture d'un ticket.</h2>
         <p><a href="yann.krasinski@supdevinci-edu.fr">👉 yann.krasinski@supdevinci-edu.fr</a></p>
         <p><a href="lafranche.corentin@supdevinci-edu.fr">👉 lafranche.corentin@supdevinci-edu.fr</a></p><br><br>
         <a href="index.php" class="btn-accueil">Accueil</a>

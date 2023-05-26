@@ -12,7 +12,7 @@
       
       <div class="wrapper">
         <a href="contact.php" class="item item_fake item_1">
-          <span class="item_title">Contact</span>
+          <span class="item_title">Support</span>
         </a>
         <a href="recherche.php" class="item item_fake item_2">
           <span class="item_title">Recherche</span>

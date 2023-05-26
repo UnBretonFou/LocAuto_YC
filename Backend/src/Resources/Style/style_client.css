@@ -137,14 +137,14 @@ table {
 
 th {
     padding: 12px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     background-color: rgba(76, 175, 80, 0.4);
 }
 
 td {
     padding: 12px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
