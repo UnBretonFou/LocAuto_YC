@@ -119,6 +119,11 @@ tr:hover {
     transition: all 0.3s ease;
 }
 
+.img-voiture {
+    width: 150px;
+    height: auto;
+}
+
 /* Style du bouton supprimer */
 .delete-button {
     background-color: #f2f2f2;
