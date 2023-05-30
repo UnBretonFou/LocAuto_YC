@@ -48,41 +48,7 @@ header a {
 }
 
 /* Style des formulaires */
-form {
-    margin-bottom: 20px;
-}
 
-h2 {
-    margin-top: 0;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input[type="text"],
-select {
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 200px;
-    margin-bottom: 10px;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
 /* Encadrement des boutons "Accueil", "Ajouter" et "Supprimer" */
 header .btn-accueil,
@@ -151,6 +117,112 @@ td {
 tr:hover {
     background-color: #f5f5f5;
     transition: all 0.3s ease;
+}
+
+/* Style du bouton supprimer */
+.delete-button {
+    background-color: #f2f2f2;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: rgb(117, 117, 117);
+}
+
+/* ====================== */
+
+/* Style du formulaire */
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="varchar"],
+input[type="int"] {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button.edit-button {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button.edit-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+a.cancel-button {
+    font-family: 'Bebas Neue', sans-serif;
+    display: block;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+  
+a.cancel-button:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 /* Style du footer */

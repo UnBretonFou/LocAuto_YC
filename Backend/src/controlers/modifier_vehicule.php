@@ -41,7 +41,7 @@ if (isset($_GET['id_voiture'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../Resources/Style/style_modifier.css">
+    <link rel="stylesheet" type="text/css" href="../Resources/Style/style_LRCM.css">
     <title>Modifier une voiture</title>
     <!-- Inclure les styles CSS nécessaires -->
     
