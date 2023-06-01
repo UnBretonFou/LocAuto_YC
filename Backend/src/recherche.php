@@ -14,7 +14,7 @@ $con = connexion();
 <body>
     <header>
         <a href="index.php" class="btn-accueil">Accueil</a>
-        <form method="POST" action="../src/controlers/ajouter_client.php">
+        <form method="POST" action="../src/controlers/ajouter_vehicule.php">
             <h2>Ajouter un véhicule</h2>
             <label for="id_marque">Marque :</label>
             <select name="id_marque" required>
@@ -26,6 +26,7 @@ $con = connexion();
                     echo "<option value='" . $row["id_marque"] . "'>" . $row["libelle"] . "</option>";
                 }
                 ?>
+
             </select><br><br>
             <label for="id_modele">Modèle :</label>
             <select name="id_modele" required>
