@@ -26,4 +26,3 @@
   
 </body>
 </html>
-<!-- ../src/Resources/gif/gif_lama_1.gif -->

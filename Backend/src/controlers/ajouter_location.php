@@ -3,7 +3,6 @@
     include "../../outils/biblio.php";
     $con = connexion();
 
-    // Récupérer les données du formulaire
     $voiture = $_POST["voiture"];
     $client = $_POST["client"];
     $compteur_debut = $_POST["compteur_debut"];
@@ -12,7 +11,7 @@
     $date_fin = $_POST["date_fin"];
     $choix_option = $_POST["choix_option"];
 
-    //Vérifier la disponnibilité de la voiture
+    //Vérifier la dispo
     $sql_disponibilite = "SELECT COUNT(*) AS count
                           FROM location
                           WHERE id_voiture = '$voiture'
@@ -24,28 +23,26 @@
     $count_disponibilite = $row_disponibilite["count"];
 
     if ($count_disponibilite > 0) {
-        // Afficher un message d'erreur quand la voiture n'est pas disponible.
+        //Afficher un message d'erreur si pas dispo
         echo "<script>alert('La voiture n\'est pas disponible pendant la période spécifiée.');</script>";
         echo "<script>window.location.href = '../location.php';</script>"; 
         exit();
     }
 
-     // La voiture est disponible, procéder à l'insertion
-    //Insérer la nouvelle location dans la base de données
+
+    //Insérer la nouvelle location
     $sql = "INSERT INTO location (id_client, id_voiture, compteur_debut, compteur_fin, date_debut, date_fin)
             VALUES ('$client', '$voiture', '$compteur_debut', '$compteur_fin', '$date_debut', '$date_fin')";
     mysqli_query($con, $sql);
 
-    // Récupérer l'ID de la dernière insertion
+    //Récupérer l'ID de la dernière insertion
     $id_location = mysqli_insert_id($con);
 
-    // Insérer les choix d'options pour la nouvelle location
+    //Insérer les choix d'options pour la nouvelle location
     foreach ($choix_option as $id_option) {
-        // Insérer une nouvelle entrée dans la table choix_option
         $sql_insert_option = "INSERT INTO choix_option (id_location, id_option) VALUES ('$id_location', '$id_option')";
         mysqli_query($con, $sql_insert_option);
     }
 
-    //Redirection vers client.php après la suppression
-    echo "<script>alert('Le client a été ajouté avec succès.'); window.location.href = '../location.php';</script>";
+    echo "<script>alert('La location a été ajouté avec succès.'); window.location.href = '../location.php';</script>";
 ?>
